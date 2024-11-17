@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .welcome-message {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido al Sistema de Horarios</h1>
+
+    {% if current_user.is_authenticated %}
+        <div class="welcome-message">
+            <p>Bienvenido, {{ current_user.username }} (Grupo {{ current_user.group_id }})</p>
+            <p><a href="/logout">Cerrar sesión</a></p>
+            <p><a href="/book_schedule">Reservar horario</a></p>
+            <p><a href="/view_schedule">Ver horarios reservados</a></p>
+        </div>
+    {% else %}
+        <div class="welcome-message">
+            <p>Por favor, inicia sesión o regístrate para acceder a las funciones del sistema.</p>
+            <p><a href="/login">Iniciar sesión</a></p>
+            <p><a href="/register">Registrar grupo</a></p>
+        </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,118 @@
+/* styles.css */
+
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Color celeste suave */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Encabezados */
+h1 {
+    color: #01579b; /* Azul marino */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los enlaces */
+a {
+    color: #0277bd; /* Azul marino */
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Formulario */
+form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+/* Etiquetas de formulario */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #01579b; /* Azul marino */
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #0288d1; /* Azul marino claro */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #e1f5fe; /* Celeste claro */
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #0277bd; /* Azul marino */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #01579b; /* Azul marino oscuro */
+}
+
+/* Tabla de horarios */
+table {
+    width: 90%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #0288d1; /* Azul marino claro */
+    text-align: left;
+    background-color: #f1f8e9; /* Celeste suave */
+}
+
+th {
+    background-color: #01579b; /* Azul marino */
+    color: white;
+    font-size: 1.1rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f8e9; /* Celeste suave */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Blanco para filas impares */
+}
+
+tr:hover {
+    background-color: #b3e5fc; /* Celeste más brillante al pasar el ratón */
+}
+
+/* Añadir algo de espacio en la parte inferior */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #01579b;
+    color: white;
+    font-size: 1rem;
+    margin-top: 50px;
+}

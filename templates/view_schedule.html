@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horarios Disponibles</title>
+</head>
+<body>
+    <h1>Horarios Disponibles</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="{{ category }}">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Día</th>
+                <th>Hora de Inicio</th>
+                <th>Hora de Fin</th>
+                <th>Grupos Registrados</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for schedule in schedules %}
+            <tr>
+                <td>{{ schedule.day }}</td>
+                <td>{{ schedule.start_time }}</td>
+                <td>{{ schedule.end_time }}</td>
+                <td>
+                    {% for group in schedule.groups_registered %}
+                        {{ group.group }} (Líder: {{ group.leader }})<br>
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Reservar Horario</h2>
+    <form method="POST" action="{{ url_for('reserve_schedule') }}">
+        <label for="day">Día:</label>
+        <select name="day">
+            <option value="Lunes">Lunes</option>
+            <option value="Martes">Martes</option>
+            <option value="Miércoles">Miércoles</option>
+            <option value="Jueves">Jueves</option>
+            <option value="Viernes">Viernes</option>
+        </select>
+        <label for="start_time">Hora de Inicio:</label>
+        <input type="text" name="start_time" required>
+        <label for="end_time">Hora de Fin:</label>
+        <input type="text" name="end_time" required>
+        <input type="submit" value="Reservar">
+    </form>
+    <a href="/logout">Cerrar Sesión</a>
+</body>
+</html>

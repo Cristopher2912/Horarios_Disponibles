@@ -1,0 +1,139 @@
+/* General */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Gris claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #333; /* Color negro para el texto */
+}
+
+/* Títulos */
+h1, h2 {
+    color: #1a1a1a; /* Negro fuerte */
+    margin-bottom: 20px;
+}
+
+/* Formularios */
+form {
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="time"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #004080; /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0059b3; /* Azul más claro */
+}
+
+/* Tablas */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0; /* Espaciado entre celdas */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados se mantengan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+th, td {
+    padding: 12px 20px; /* Espaciado interior */
+    text-align: left;
+    border: 1px solid #ddd;
+    white-space: nowrap; /* Evita que las palabras se peguen demasiado */
+}
+
+th {
+    background-color: #0059b3; /* Azul oscuro */
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #cce6ff; /* Celeste claro */
+}
+
+tr:nth-child(odd) {
+    background-color: #e6f2ff; /* Celeste más claro */
+}
+
+tr:hover {
+    background-color: #b3d9ff; /* Celeste intenso al pasar el mouse */
+}
+
+/* Mensajes */
+.message {
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Enlaces */
+a {
+    color: #004080; /* Azul oscuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Centrando contenido */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
